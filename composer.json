@@ -1,0 +1,10 @@
+{
+    "name": "nipun/php-test",
+    "autoload": {
+        "psr-4": {
+            "Services\\": "services/",
+            "Helpers\\": "helpers/"
+        }
+    },
+    "require": {}
+}
