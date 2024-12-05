@@ -6,6 +6,8 @@ use Services\MyInterface;
 
 class MyClass implements MyInterface
 {
+
+
     public function foo()
     {
         echo <<<'HTML'
@@ -53,6 +55,32 @@ class MyClass implements MyInterface
         echo 'Is Countable: ' . is_countable($stdThree) . '<br>';
     }
 
+
+    public function pickCard(Suit $suit)
+    {
+        switch ($suit) {
+            case Suit::HEARTS:
+                echo 'Heart';
+                break;
+            case Suit::DIAMONDS:
+                echo 'Diamond';
+                break;
+            case Suit::CLUBS:
+                echo 'Club';
+                break;
+            case Suit::SPADES:
+                echo 'Spades';
+                break;
+            default:
+                echo 'Unknown';
+        }
+    }
+
+    public function neverReturn(): never
+    {
+        throw new \Exception('Never Return');
+    }
+
 }
 
 class Student {
@@ -62,4 +90,11 @@ class Student {
     {
         
     }
+}
+
+enum Suit {
+    case HEARTS;
+    case DIAMONDS;
+    case CLUBS;
+    case SPADES;
 }

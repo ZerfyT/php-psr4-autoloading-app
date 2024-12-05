@@ -1,10 +1,14 @@
 <?php
 
+use Services\Suit;
+
 require_once realpath(__DIR__) . '/init.php';
 
 $myClass = new Services\MyClass();
 $myClass->foo();
 $myClass->jsonEncodeAndDecode();
+$myClass->pickCard(Suit::SPADES);
+// $myClass->neverReturn();
 ?>
 <!DOCTYPE html>
 <html lang="en">
