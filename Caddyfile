@@ -1,0 +1,13 @@
+{
+    # Enable FrankenPHP
+    order php_server before file_server
+	frankenphp
+}
+
+localhost:8012 {
+    # Enable compression (optional)
+	encode zstd br gzip
+	# Execute PHP files in the current directory and serve assets
+    root * /var/www/php-test
+    php_server
+}
