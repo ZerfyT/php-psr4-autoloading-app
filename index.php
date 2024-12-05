@@ -4,6 +4,7 @@ require_once realpath(__DIR__) . '/init.php';
 
 $myClass = new Services\MyClass();
 $myClass->foo();
+$myClass->jsonEncodeAndDecode();
 ?>
 <!DOCTYPE html>
 <html lang="en">
